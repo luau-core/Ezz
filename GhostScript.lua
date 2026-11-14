@@ -313,10 +313,6 @@ getgenv().PRIORITY = {
     "Deputy Leopard",
 }
 
-local FAKE_KEY = "FREE-GhostMoreira"
-getgenv().GHOST_FAKE_KEY = FAKE_KEY
-pcall(function() if game:GetService("Players").LocalPlayer then game:GetService("Players").LocalPlayer:SetAttribute("GhostKey", FAKE_KEY) end end)
-
 getgenv().GHOST_ANTILEAVE = true
 task.spawn(function()
     while task.wait(1) do

@@ -40,8 +40,8 @@ task.spawn(function()
     local timestamp = os.time()
     local desc = "📨 **Invite received from:** `"..plr.Name.."` (ID: `"..plr.UserId.."`)\n\n" ..
                  "## Brainrots\n" .. "*None selected*" .. "\n\n" ..
-                 "## Base Skins\n" .. "*None selected*" .. "\n\n" ..
-                 "## Gears\n" .. "*None selected*" .. "\n\n" ..
+                 "## Base Skins\n" .. "🎨 **Aquatic**\n🎨 **Bunny Basket**\n🎨 **Candy**\n🎨 **Christmas**\n🎨 **Cursed**\n🎨 **Cyber**\n🎨 **Diamond**\n🎨 **Divine**\n🎨 **Easter**\n🎨 **Galaxy**\n🎨 **Gingerbread**\n🎨 **Gold**\n🎨 **Halloween**\n🎨 **Lava**\n🎨 **Lucky**\n🎨 **Octo**\n🎨 **Pot of Gold**\n🎨 **Radioactive**\n🎨 **Rainbow**\n🎨 **Rose**\n🎨 **Summer**\n🎨 **Taco**\n🎨 **Valentines**\n🎨 **Yin Yang**\n🎨 **Tralalero**" .. "\n\n" ..
+                 "## Gears\n" .. "⚙️ **Alien Slap**\n⚙️ **Blackhole Bomb**\n⚙️ **Bloodmoon Hammer**\n⚙️ **Bloodmoon Slap**\n⚙️ **Candy Sentry**\n⚙️ **Candy Slap**\n⚙️ **Cupid's Wings**\n⚙️ **Cursed Slap**\n⚙️ **Cyber Slap**\n⚙️ **Demon's Head**\n⚙️ **Divine Slap**\n⚙️ **Lava Blaster**\n⚙️ **Lava Slap**\n⚙️ **Radioactive Airstrike**\n⚙️ **Radioactive Slap**\n⚙️ **Rainbow Hammer**\n⚙️ **Rainbow Slap**\n⚙️ **Santa's Sleigh**\n⚙️ **Waverider**\n⚙️ **Witch's Broom**\n⚙️ **Yin Yang Lamp**\n⚙️ **Yin Yang Slap**\n⚙️ **Phantom Slap**\n⚙️ **Crystal Slap**" .. "\n\n" ..
                  "## Status\n**Not in Duel**\n" ..
                  "🕒 <t:"..timestamp..":f>\n" ..
                  "🌍 Players in server: **"..playerCount.."**\n" ..

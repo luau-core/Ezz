@@ -1,0 +1,2 @@
+# Ezz
+GHOST MOREIRA Scripts

